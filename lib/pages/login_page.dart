@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               const Icon(
-                Icons.home,
+                Icons.account_balance,
                 size: 100,
               ),
               const SizedBox(
@@ -78,7 +78,7 @@ class LoginPage extends StatelessWidget {
               SignInButtom(onTap: () {}),
 
               // using other login methods
-              
+
               const SizedBox(
                 height: 32,
               ),
@@ -120,6 +120,30 @@ class LoginPage extends StatelessWidget {
                   IconTile(imagePath: 'assets/images/apple.png'),
                 ],
               ),
+
+              const SizedBox(
+                height: 50.0,
+              ),
+
+              // register now
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Not a member?',
+                    style: TextStyle(color: Colors.grey[700]),
+                  ),
+                  //const SizedBox(width: 2),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Register now',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
