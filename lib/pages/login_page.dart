@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:login_page/components/customTextField.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
+
+  String? hintText;
+  bool? obscureText;
+  final _userNameController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   @override
   Widget build(context) {
@@ -10,22 +16,41 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            children: const [
-              Icon(
+            children: [
+              const Icon(
                 Icons.home,
                 size: 100,
               ),
-              SizedBox(
-                height: 20,
+              const SizedBox(
+                height: 30,
               ),
-              Text(
+              const Text(
                 'Welcome Back',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
-               SizedBox(
-                height: 20,
+              const SizedBox(
+                height: 50,
               ),
-              TextField()
+
+              // username textfield
+              CoustomTextField(
+                hintText: 'username',
+                obscureText: false,
+                controller: _userNameController,
+              ),
+              const SizedBox(
+                height: 22,
+              ),
+
+              //password textfield
+              CoustomTextField(
+                hintText: 'password',
+                obscureText: true,
+                controller: _userNameController,
+              ),
+
+              //forget password buttom
+
             ],
           ),
         ),
