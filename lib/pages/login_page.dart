@@ -50,6 +50,17 @@ class LoginPage extends StatelessWidget {
               ),
 
               //forget password buttom
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal:42.0,vertical: 10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton.icon(onPressed: (){}, icon:const Icon(Icons.man), label:const Text('forget password'))
+                  ],
+                ),
+              ),
+
+              //
 
             ],
           ),
