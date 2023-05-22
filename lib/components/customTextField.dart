@@ -6,7 +6,7 @@ class CoustomTextField extends StatelessWidget {
       required this.controller,
       required this.hintText,
       required this.obscureText});
-  final controller;
+  final TextEditingController controller;
   String hintText;
   bool obscureText;
 
@@ -15,8 +15,8 @@ class CoustomTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 50.0),
       child: TextField(
-         obscureText: obscureText,
-         controller: controller,
+        obscureText: obscureText,
+        controller: controller,
         decoration: InputDecoration(
             filled: true,
             enabledBorder: OutlineInputBorder(
@@ -26,9 +26,9 @@ class CoustomTextField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.grey.shade400),
             ),
-            fillColor: Colors.grey.shade300,
+            fillColor: Colors.black12,
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.grey[500])),
+            hintStyle: const TextStyle(color: Colors.white54)),
       ),
     );
   }
